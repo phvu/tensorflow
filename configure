@@ -127,10 +127,6 @@ if [ "$TF_MKL_ENABLED" == "true" ]; then # Disable building with MKL for now
       exit 1
     fi
 
-    if [ -z "$fromuser" ]; then
-      exit 1
-    fi
-
 cat > third_party/mkl/mkl.config <<EOF
 # MKL_INSTALL_PATH refers to the location of MKL root folder. The MKL header and library
 # files can be either in this directory, or under include/ and lib64/
